@@ -13,6 +13,162 @@ ol {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #333;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main header {
+  width: 20%;
+  height: 100%;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+main header h1 {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+main header h1 i {
+  font-size: 5vw;
+  margin-bottom: 15px;
+}
+main header h1 span {
+  width: 100%;
+  text-align: center;
+  font: normal 0.8vw/1 "arial";
+}
+main header p {
+  font: normal 11px/1.2 "arial";
+  text-align: center;
+  color: #888;
+}
+main section {
+  width: 80%;
+  height: 100%;
+  padding-top: 10vh;
+  display: flex;
+}
+main section nav {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  top: 6vh;
+  right: 5vw;
+}
+main section nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section nav ul i {
+  font-size: 20px;
+  color: #ccc;
+}
+main section article {
+  flex: 1;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+main section article::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 95%;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  transition: 1s;
+  opacity: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+main section article:hover {
+  flex: 1.3;
+}
+main section article:hover::before {
+  left: 0;
+  opacity: 1;
+}
+main section article:hover .inner .txt {
+  padding-top: 20px;
+}
+main section article:hover .inner .txt h2 {
+  font-size: 5vw;
+}
+main section article:hover .inner .txt h2::after {
+  width: 80px;
+  background-color: orange;
+}
+main section article:hover .inner figure {
+  height: 20vh;
+  top: 25px;
+  filter: saturate(1.2);
+}
+main section article .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  padding: 30px 50px 100px;
+}
+main section article .inner .txt {
+  width: 100%;
+  padding-top: 70px;
+  transition: 1s;
+}
+main section article .inner .txt h2 {
+  font: normal 3vw/1 "Alegreya Sans SC";
+  color: #bbb;
+  transition: 1s;
+  margin-bottom: 40px;
+}
+main section article .inner .txt h2::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  background-color: white;
+  transition: 1.5s;
+}
+main section article .inner .txt p {
+  font: 1vw/1.2 "arial";
+  color: #777;
+}
+main section article .inner figure {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  filter: saturate(0);
+}
+main section article .inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
